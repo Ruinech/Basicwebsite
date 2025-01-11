@@ -1,0 +1,142 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    border: 2px solid black;
+    width: 90%;
+    margin: 1.2em auto 0 auto;
+  }
+  
+  /* Header Styling */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #000;
+    position: sticky; /* Keeps header at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation Menu */
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+  }
+
+  .sliding-border {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* Pseudo-element for the sliding border */
+  .sliding-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Thickness of the border */
+    background-color: red; /* Border color */
+    transition: width 0.4s ease;
+  }
+  
+  /* Hover Effect */
+  .sliding-border:hover::after {
+    width: 100%;
+  }
+
+  .menu-container{
+    margin: 4em auto;
+    text-align: center;
+  }
+
+  #dot {
+    color: gray;
+    margin-top: 0.7em;
+  }
+  
+  table, td {
+    border-top: none;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-collapse: collapse;
+  }
+
+ td {
+    padding: 2.1em;
+    text-align: left;
+    line-height: 1.8rem;
+  }
+
+  table {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .table-list {
+    list-style-type: none;
+  }
+
+  #main-container {
+    margin-bottom: 1.8rem;
+  }  
+  
+  .footer-header {
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-top: none;
+    padding: 2.1rem;
+  }
+
+  .footer-layout {
+    display: flex;
+    margin-top: 2em;
+    gap: 20px;
+  }
+
+  .review-card {
+    border: 2px solid black;
+    width: 79%;
+    border-radius: 30px;
+  }
+
+  .review-card > p {
+    padding: 1rem;
+  }
+
+    /* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+}
+  
