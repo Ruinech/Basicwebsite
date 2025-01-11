@@ -85,10 +85,14 @@
     border-collapse: collapse;
   }
 
- td {
+  td {
     padding: 2.1em;
     text-align: left;
     line-height: 1.8rem;
+  }
+
+  td a {
+    text-decoration: none;
   }
 
   table {
@@ -128,15 +132,76 @@
     padding: 1rem;
   }
 
-    /* Responsive Design */
+  /* Responsive Design */
 @media (max-width: 768px) {
-    .main-header {
-      flex-wrap: wrap;
-      text-align: center;
-    }
-    .nav-menu ul {
-      flex-direction: column;
-      gap: 10px;
-    }
+  .logo {
+    text-align: center;
+  }
+
+  .main-header {
+    display: block;
+  }
+
+  .nav-menu > ul {
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+  }
+
+  table {
+    border: none;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+
+  td {
+    border-left: none;
+    border-right: none ;
+    text-align: center;
+  }
+
+  .table-container {
+    display: block;
+  }
+
+  .table-container td {
+    display: block;
+    margin-bottom: 16px; /* Add space between stacked sections */
+    padding: 0;
+  }
+
+  .table-container td:last-child {
+    margin-bottom: 0;
+    border-bottom: 2px solid black;
+  }
 }
-  
+
+/* Additional styles for aesthetics */
+#main-container {
+  margin-bottom: 8px;
+}
+
+.table-list {
+  margin: 8px 0;
+}
+
+#list-line {
+  margin: 4px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.footer-layout {
+  flex-direction: column; /* Stack review cards vertically */
+  gap: 16px; /* Add spacing between stacked cards */
+  align-items: center;
+}
+
+.footer-header h2 {
+  text-align: center;
+}
+
+.review-card {
+  max-width: 100%; /* Ensure cards take full width */
+}
